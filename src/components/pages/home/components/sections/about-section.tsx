@@ -51,6 +51,9 @@ export function AboutSection() {
                     "TypeScript",
                     "Tailwind CSS",
                     "Framer Motion",
+                    "Material UI",
+                    "Tiptap",
+                    "Stripe",
                   ].map((tech) => (
                     <div key={tech} className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-blue-400 rounded-full" />
@@ -62,7 +65,15 @@ export function AboutSection() {
               <div>
                 <h4 className="font-semibold mb-3 text-white">Backend</h4>
                 <div className="space-y-2">
-                  {["Node.js", "PostgreSQL", "Redis", "Docker"].map((tech) => (
+                  {[
+                    "Node.js",
+                    "PostgreSQL",
+                    "Redis",
+                    "Docker",
+                    "Nestjs",
+                    "AI/ML",
+                    "php",
+                  ].map((tech) => (
                     <div key={tech} className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-purple-400 rounded-full" />
                       <span className="text-sm text-white/80">{tech}</span>

@@ -28,7 +28,7 @@ export function ProjectsSection() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               {projects.map((project, index) => (
                 <motion.div
                   key={project.id}
@@ -43,7 +43,7 @@ export function ProjectsSection() {
                       <img
                         src={project.image || "/placeholder.svg"}
                         alt={project.title}
-                        className="w-full h-32 md:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-50 md:h-50 object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute top-4 right-4">
                         <Badge

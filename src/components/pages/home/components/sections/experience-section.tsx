@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin } from "lucide-react";
+import { Calendar, MapPin } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -62,9 +62,13 @@ export function ExperienceSection() {
                         {exp.current ? "Current" : exp.year}
                       </Badge>
                     </div>
-                    <p className="text-blue-400 font-medium mb-2">
-                      {exp.company}
-                    </p>
+                    <div className="flex items-center gap-4 mb-1">
+                      <p className="text-blue-400 font-medium">{exp.company}</p>
+                      <div className="flex items-center gap-2 text-white/60 text-sm">
+                        <Calendar className="w-4 h-4" />
+                        {exp.time}
+                      </div>
+                    </div>
                     <div className="flex items-center gap-2 text-white/60 text-sm">
                       <MapPin className="w-4 h-4" />
                       {exp.location}
