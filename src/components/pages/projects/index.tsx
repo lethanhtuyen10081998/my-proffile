@@ -47,6 +47,8 @@ export function ProjectsSection() {
                         }
                         alt={project.title}
                         className="w-full h-50 md:h-50 object-cover group-hover:scale-105 transition-transform duration-300"
+                        width={1000}
+                        height={1000}
                       />
                       <div className="absolute top-4 right-4">
                         <Badge

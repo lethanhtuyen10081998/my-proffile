@@ -42,7 +42,7 @@ export default function RootLayout({
 
             <DesktopSidebar />
 
-            <main className="md:ml-24 md:mt-8 md:pb-8 min-h-screen mx-4">
+            <main className="md:ml-24 pt-20 pb-20 md:pt-12 md:pb-16 mx-4">
               <AnimatePresence mode="wait">{children}</AnimatePresence>
             </main>
 

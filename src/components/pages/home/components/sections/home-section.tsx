@@ -205,8 +205,8 @@ export function HomeSection() {
                         src="/images/projects/travel.png"
                         alt="Latest project"
                         className="w-full h-40 md:h-40 object-cover rounded-lg"
-                        width={100}
-                        height={100}
+                        width={1000}
+                        height={1000}
                       />
                       <div>
                         <h4 className="font-semibold text-white">
@@ -252,6 +252,8 @@ export function HomeSection() {
                         src="/images/projects/taggrading.png"
                         alt="Latest project"
                         className="w-full h-40 md:h-40 object-cover rounded-lg"
+                        width={1000}
+                        height={1000}
                       />
                       <div>
                         <h4 className="font-semibold text-white">
