@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Send, Mail, Github, Linkedin } from "lucide-react";
+import { Send, Mail, Github, Linkedin, Facebook } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -91,15 +91,20 @@ export function ContactSection() {
               {
                 icon: Mail,
                 label: "Email",
-                value: "hello@example.com",
-                href: "mailto:hello@example.com",
+                value: "lethanhtuyen10081998@gmail.com",
+                href: "mailto:lethanhtuyen10081998@gmail.com",
               },
-              { icon: Github, label: "GitHub", value: "@username", href: "#" },
               {
-                icon: Linkedin,
-                label: "LinkedIn",
-                value: "/in/username",
-                href: "#",
+                icon: Github,
+                label: "GitHub",
+                value: "lethanhtuyen10081998",
+                href: "https://github.com/lethanhtuyen10081998",
+              },
+              {
+                icon: Facebook,
+                label: "Facebook",
+                value: "https://www.facebook.com/kp92prjxq8/",
+                href: "https://www.facebook.com/kp92prjxq8/",
               },
             ].map((contact) => (
               <motion.a
