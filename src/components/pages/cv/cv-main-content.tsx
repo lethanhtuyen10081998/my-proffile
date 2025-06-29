@@ -26,11 +26,11 @@ const personalInfo = {
   email: "lethanhtuyen10081998@gmail.com",
   phone: "+84 0977 432 417",
   location: "Ho Chi Minh City, Vietnam",
-  website: "https://tuyenlt.netlify.app/",
+  website: "https://tuyenlt.netlify.app",
   github: "https://github.com/lethanhtuyen10081998",
   summary:
     "Passionate full-stack developer with 5+ years crafting exceptional digital experiences. Specialized in React ecosystem, Node.js, and cloud architecture. Love turning complex problems into elegant solutions.",
-  avatar: "/placeholder-user.jpg",
+  avatar: "/images/avatar.jpg",
 };
 
 const education = {
@@ -76,9 +76,9 @@ export function CVMainContent() {
                   src={personalInfo.avatar}
                   alt={personalInfo.name}
                   width={100}
-                  height={150}
+                  height={100}
                   className="rounded-full border-4 border-black/20 shadow-md"
-                  style={{ objectFit: "contain" }}
+                  style={{ objectFit: "cover" }}
                 />
               </motion.div>
 
@@ -155,9 +155,7 @@ export function CVMainContent() {
       {/* Main Content */}
       <div className="px-6 py-4">
         <div className="grid grid-cols-12 gap-6">
-          {/* Left Column - Experience & Projects */}
           <div className="col-span-8 space-y-6">
-            {/* Experience */}
             <section>
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center shadow-lg">
@@ -175,7 +173,6 @@ export function CVMainContent() {
                 {experience.map((exp, index) => (
                   <div key={index} className="relative">
                     <div className="flex gap-2">
-                      {/* Timeline */}
                       <div className="flex flex-col items-center">
                         <div
                           className={`w-3 h-3 rounded-full border-3 ${
@@ -185,14 +182,13 @@ export function CVMainContent() {
                           }`}
                         ></div>
                         {index !== experience.length - 1 && (
-                          <div className="w-0.5 h-full bg-gradient-to-b from-slate-300 to-slate-200 mt-1"></div>
+                          <div className="w-0.5 h-full bg-gradient-to-b from-slate-300 to-slate-200"></div>
                         )}
                       </div>
 
-                      {/* Content */}
-                      <div className="flex-1 pb-4">
+                      <div className="flex-1 pb-1">
                         <div className="bg-white rounded-lg border border-slate-200 p-4 shadow-sm hover:shadow-md transition-all duration-300">
-                          <div className="flex items-start justify-between mb-3">
+                          <div className="flex items-start justify-between mb-1">
                             <div>
                               <h4 className="text-lg font-bold text-slate-900">
                                 {exp.title}
@@ -214,17 +210,17 @@ export function CVMainContent() {
                             </div>
                           </div>
 
-                          <div className="flex items-center gap-2 text-sm text-slate-600 mb-3">
+                          <div className="flex items-center gap-2 text-sm text-slate-600 mb-1">
                             <MapPin className="w-4 h-4" />
                             <span>{exp.location}</span>
                           </div>
 
-                          <p className="text-sm text-slate-700 mb-3 leading-relaxed">
+                          <p className="text-sm text-slate-700 mb-1 leading-relaxed">
                             {exp.description}
                           </p>
 
                           <div className="mb-3">
-                            <h5 className="text-sm font-semibold text-slate-900 mb-2">
+                            <h5 className="text-sm font-semibold text-slate-900 mb-1">
                               Key Achievements:
                             </h5>
                             <ul className="space-y-1">
@@ -266,7 +262,7 @@ export function CVMainContent() {
 
             {/* Projects */}
             <section>
-              <div className="flex items-center gap-2 mb-4">
+              <div className="flex items-center gap-2 mb-2">
                 <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center shadow-lg">
                   <Star className="w-5 h-5 text-white" />
                 </div>
