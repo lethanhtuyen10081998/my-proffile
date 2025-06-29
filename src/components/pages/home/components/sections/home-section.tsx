@@ -113,8 +113,8 @@ export function HomeSection() {
       {/* Stats Cards */}
       <div className="md:col-span-4 grid grid-cols-3 md:grid-cols-1 gap-4 md:gap-6">
         {[
-          { number: "50+", label: "Projects", icon: FolderOpen },
-          { number: "3+", label: "Years", icon: Calendar },
+          { number: "30+", label: "Projects", icon: FolderOpen },
+          { number: "5+", label: "Years", icon: Calendar },
           { number: "100%", label: "Satisfaction", icon: Star },
         ].map((stat, index) => (
           <motion.div
@@ -143,12 +143,13 @@ export function HomeSection() {
       </div>
 
       {/* Quick Skills & Recent Project */}
-      <div className="md:col-span-12 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+      <div className="md:col-span-6 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
         {/* Quick Skills */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
+          className="md:col-span-12"
         >
           <Card className="h-full bg-white/5 border-white/10 backdrop-blur-sm">
             <CardHeader>
@@ -177,53 +178,115 @@ export function HomeSection() {
             </CardContent>
           </Card>
         </motion.div>
+      </div>
 
-        {/* Recent Project */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7 }}
-        >
-          <Card className="h-full bg-white/5 border-white/10 backdrop-blur-sm group cursor-pointer hover:bg-white/10 transition-all duration-300">
-            <CardHeader>
-              <CardTitle className="flex items-center justify-between text-lg md:text-xl text-white">
-                <span className="flex items-center">
-                  <Zap className="w-5 h-5 mr-2" />
-                  Latest Project
-                </span>
-                <ChevronRight className="w-5 h-5 text-white/60 group-hover:translate-x-1 transition-transform" />
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                <img
-                  src="/placeholder.svg?height=120&width=200"
-                  alt="Latest project"
-                  className="w-full h-20 md:h-24 object-cover rounded-lg"
-                />
-                <div>
-                  <h4 className="font-semibold text-white">
-                    AI E-Commerce Platform
-                  </h4>
-                  <p className="text-sm text-white/70">
-                    Next-gen shopping experience with AI recommendations
-                  </p>
+      <div className="md:col-span-6">
+        <div className="md:col-span-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+          >
+            <Card className="h-full bg-white/5 border-white/10 backdrop-blur-sm group cursor-pointer hover:bg-white/10 transition-all duration-300">
+              <CardHeader>
+                <CardTitle className="flex items-center justify-between text-lg md:text-xl text-white">
+                  <span className="flex items-center">
+                    <Zap className="w-5 h-5 mr-2" />
+                    Latest Project
+                  </span>
+                  <ChevronRight className="w-5 h-5 text-white/60 group-hover:translate-x-1 transition-transform" />
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
+                  <div className="md:col-span-6">
+                    <div className="space-y-4 ">
+                      <img
+                        src="/images/projects/travel.png"
+                        alt="Latest project"
+                        className="w-full h-40 md:h-40 object-cover rounded-lg"
+                      />
+                      <div>
+                        <h4 className="font-semibold text-white">
+                          Travel Management System
+                        </h4>
+                        <p className="text-sm text-white/70">
+                          Travel management system for managing travel expenses
+                          and bookings. Using AI to generate reports and
+                          insights.
+                        </p>
+                      </div>
+                      <div className="flex gap-2 flex-wrap">
+                        <Badge className="bg-blue-600/20 text-blue-300 text-xs">
+                          Next.js
+                        </Badge>
+                        <Badge className="bg-purple-600/20 text-purple-300 text-xs">
+                          AI/ML
+                        </Badge>
+                        <Badge className="bg-green-600/20 text-green-300 text-xs">
+                          Stripe
+                        </Badge>
+                        <Badge className="bg-green-600/20 text-amber-300 text-xs">
+                          Nestjs + Oracle
+                        </Badge>
+                        <Badge className="bg-green-600/20 text-amber-300 text-xs">
+                          Material UI
+                        </Badge>
+                        <Badge className="bg-green-600/20 text-green-400 text-xs">
+                          Tiptap
+                        </Badge>
+                        <Badge className="bg-green-600/20 text-cyan-400 text-xs">
+                          n8n
+                        </Badge>
+                        <Badge className="bg-green-600/20 text-orange-700 text-xs">
+                          Node.js
+                        </Badge>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="md:col-span-6">
+                    <div className="space-y-4 ">
+                      <img
+                        src="/images/projects/taggrading.png"
+                        alt="Latest project"
+                        className="w-full h-40 md:h-40 object-cover rounded-lg"
+                      />
+                      <div>
+                        <h4 className="font-semibold text-white">
+                          TAG Grading
+                        </h4>
+                        <p className="text-sm text-white/70">
+                          TAG Grading is a platform for grading and analyzing
+                          the quality of the product.
+                        </p>
+                      </div>
+                      <div className="flex gap-2 flex-wrap">
+                        <Badge className="bg-blue-600/20 text-blue-300 text-xs">
+                          React JS
+                        </Badge>
+                        <Badge className="bg-purple-600/20 text-purple-300 text-xs">
+                          AI/ML
+                        </Badge>
+                        <Badge className="bg-green-600/20 text-green-300 text-xs">
+                          Stripe
+                        </Badge>
+                        <Badge className="bg-green-600/20 text-amber-300 text-xs">
+                          PostgreSQL
+                        </Badge>
+                        <Badge className="bg-green-600/20 text-amber-300 text-xs">
+                          Material UI
+                        </Badge>
+                        <Badge className="bg-green-600/20 text-green-400 text-xs">
+                          Node.js
+                        </Badge>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex gap-2 flex-wrap">
-                  <Badge className="bg-blue-600/20 text-blue-300 text-xs">
-                    Next.js
-                  </Badge>
-                  <Badge className="bg-purple-600/20 text-purple-300 text-xs">
-                    AI/ML
-                  </Badge>
-                  <Badge className="bg-green-600/20 text-green-300 text-xs">
-                    Stripe
-                  </Badge>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </motion.div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
       </div>
     </div>
   );

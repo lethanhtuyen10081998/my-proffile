@@ -10,20 +10,20 @@ export const navigationItems = [
 
 export const skills = [
   { name: "React/Next.js", level: 95, color: "from-blue-500 to-cyan-500" },
-  { name: "TypeScript", level: 90, color: "from-blue-600 to-blue-400" },
-  { name: "Node.js", level: 85, color: "from-green-500 to-emerald-500" },
+  { name: "TypeScript", level: 100, color: "from-blue-600 to-blue-400" },
+  { name: "Node.js", level: 90, color: "from-green-500 to-emerald-500" },
+  { name: "AWS/Docker", level: 78, color: "from-orange-500 to-red-500" },
   { name: "UI/UX Design", level: 88, color: "from-purple-500 to-pink-500" },
   { name: "PostgreSQL", level: 82, color: "from-indigo-500 to-purple-500" },
-  { name: "AWS/Docker", level: 78, color: "from-orange-500 to-red-500" },
 ];
 
 export const projects = [
   {
     id: 1,
-    title: "AI E-Commerce Platform",
-    description: "Next-gen e-commerce with AI recommendations",
-    tech: ["Next.js", "AI/ML", "Stripe"],
-    image: "/placeholder.svg?height=200&width=300",
+    title: "BeautyTap",
+    description: `Beautytap is a curated destination and digital platform for the discovery of global, multicultural beauty brands and products combining trusted expert reviews, rich editorials and a diverse beauty professional community. Discover new global brands and products through professional reviews from trusted beauty experts.`,
+    tech: ["Next.js", "AI/ML", "Stripe", "Material UI", "Tiptap"],
+    image: "/projects/beautytap.png",
     status: "Live",
     year: "2024",
   },
