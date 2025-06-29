@@ -1,24 +1,23 @@
 "use client";
 
-import { motion } from "framer-motion";
-import Image from "next/image";
-import {
-  MapPin,
-  Building,
-  Award,
-  GraduationCap,
-  Code,
-  Star,
-  Mail,
-  Phone,
-  Github,
-  Linkedin,
-  Globe,
-  Calendar,
-  ExternalLink,
-} from "lucide-react";
+import { experience, projects, skills } from "@/common/constants";
 import { Badge } from "@/components/ui/badge";
-import { skills, projects, experience } from "@/common/constants";
+import { motion } from "framer-motion";
+import {
+  Award,
+  Building,
+  Calendar,
+  Code,
+  Github,
+  Globe,
+  GraduationCap,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  Star,
+} from "lucide-react";
+import Image from "next/image";
 
 const personalInfo = {
   name: "Tuyen Le Thanh",
@@ -31,7 +30,7 @@ const personalInfo = {
   github: "https://github.com/lethanhtuyen10081998",
   summary:
     "Passionate full-stack developer with 5+ years crafting exceptional digital experiences. Specialized in React ecosystem, Node.js, and cloud architecture. Love turning complex problems into elegant solutions.",
-  avatar: "/images/projects/carina.png",
+  avatar: "/placeholder-user.jpg",
 };
 
 const education = {
@@ -76,9 +75,10 @@ export function CVMainContent() {
                 <Image
                   src={personalInfo.avatar}
                   alt={personalInfo.name}
-                  width={150}
+                  width={100}
                   height={150}
-                  className="rounded-full border-4 border-white shadow-md"
+                  className="rounded-full border-4 border-black/20 shadow-md"
+                  style={{ objectFit: "contain" }}
                 />
               </motion.div>
 
@@ -174,7 +174,7 @@ export function CVMainContent() {
               <div className="space-y-4">
                 {experience.map((exp, index) => (
                   <div key={index} className="relative">
-                    <div className="flex gap-3">
+                    <div className="flex gap-2">
                       {/* Timeline */}
                       <div className="flex flex-col items-center">
                         <div
@@ -185,7 +185,7 @@ export function CVMainContent() {
                           }`}
                         ></div>
                         {index !== experience.length - 1 && (
-                          <div className="w-0.5 h-20 bg-gradient-to-b from-slate-300 to-slate-200 mt-1"></div>
+                          <div className="w-0.5 h-full bg-gradient-to-b from-slate-300 to-slate-200 mt-1"></div>
                         )}
                       </div>
 
@@ -281,7 +281,7 @@ export function CVMainContent() {
               <div className="grid grid-cols-2 gap-4">
                 {projects.slice(0, 4).map((project, index) => (
                   <div key={project.id} className="group">
-                    <div className="bg-white rounded-lg border border-slate-200 p-4 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                    <div className="bg-white rounded-lg border border-slate-200 p-2 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                       <div className="flex items-center justify-between mb-3">
                         <div className="text-3xl">
                           {project.id === 1
@@ -332,10 +332,10 @@ export function CVMainContent() {
                         )}
                       </div>
 
-                      <div className="flex items-center gap-1 text-xs text-slate-500">
+                      {/* <div className="flex items-center gap-1 text-xs text-slate-500">
                         <ExternalLink className="w-3 h-3" />
                         <span>View Project</span>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 ))}
