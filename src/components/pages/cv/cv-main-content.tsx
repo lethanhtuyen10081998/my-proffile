@@ -279,7 +279,7 @@ export function CVMainContent() {
               </div>
 
               <div className="grid grid-cols-2 gap-4">
-                {projects.slice(0, 4).map((project, index) => (
+                {projects.slice(0, 4).map((project) => (
                   <div key={project.id} className="group">
                     <div className="bg-white rounded-lg border border-slate-200 p-2 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                       <div className="flex items-center justify-between mb-3">

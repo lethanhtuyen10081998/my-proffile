@@ -13,36 +13,6 @@ interface CVClientProps {
 export default function CVClient({ locale }: CVClientProps) {
   const [isPreviewMode, setIsPreviewMode] = useState(false);
 
-  const handlePrint = () => {
-    window.print();
-  };
-
-  const handleDownload = () => {
-    // Simulate PDF download
-    const link = document.createElement("a");
-    link.href = "#";
-    link.download = "CV_Creative_Developer.pdf";
-    link.click();
-  };
-
-  const handleShare = async () => {
-    if (navigator.share) {
-      try {
-        await navigator.share({
-          title: "My CV - Creative Developer",
-          text: "Check out my professional CV",
-          url: window.location.href,
-        });
-      } catch (err) {
-        console.log("Error sharing:", err);
-      }
-    } else {
-      // Fallback: copy to clipboard
-      navigator.clipboard.writeText(window.location.href);
-      alert("Link copied to clipboard!");
-    }
-  };
-
   if (isPreviewMode) {
     return (
       <CVPreview locale={locale} onClose={() => setIsPreviewMode(false)} />
