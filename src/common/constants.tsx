@@ -1,4 +1,11 @@
-import { Home, User, Briefcase, FolderOpen, MessageCircle } from "lucide-react";
+import {
+  Home,
+  User,
+  Briefcase,
+  FolderOpen,
+  MessageCircle,
+  FileText,
+} from "lucide-react";
 
 export const navigationItems = [
   { id: "home", label: "Home", icon: Home, link: "/" },
@@ -11,6 +18,7 @@ export const navigationItems = [
   },
   { id: "projects", label: "Projects", icon: FolderOpen, link: "/projects" },
   { id: "contact", label: "Contact", icon: MessageCircle, link: "/contact" },
+  { id: "cv", label: "CV", icon: FileText, link: "/cv" },
 ];
 
 export const skills = [
@@ -194,6 +202,15 @@ export const experience = [
     location: "Ho Chi Minh City, Vietnam",
     current: true,
     time: "2020-2025",
+    description:
+      "Lead development of scalable web applications serving 100K+ users. Architect cloud infrastructure and mentor junior developers.",
+    achievements: [
+      "Built AI-powered e-commerce platform increasing conversion by 35%",
+      "Reduced server costs by 40% through AWS optimization",
+      "Led team of 5 developers on microservices migration",
+      "Implemented CI/CD pipeline reducing deployment time by 60%",
+    ],
+    technologies: ["React", "Node.js", "AWS", "PostgreSQL", "Docker"],
   },
   {
     year: "2019",
@@ -202,5 +219,14 @@ export const experience = [
     location: "Ho Chi Minh City, Vietnam",
     current: false,
     time: "2019-2020",
+    description:
+      "Lead development of scalable web applications serving 100K+ users. Architect cloud infrastructure and mentor junior developers.",
+    achievements: [
+      "Built AI-powered e-commerce platform increasing conversion by 35%",
+      "Reduced server costs by 40% through AWS optimization",
+      "Led team of 5 developers on microservices migration",
+      "Implemented CI/CD pipeline reducing deployment time by 60%",
+    ],
+    technologies: ["React", "Node.js", "AWS", "PostgreSQL", "Docker"],
   },
 ];

@@ -20,8 +20,11 @@ import {
   Zap,
 } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export function HomeSection() {
+  const router = useRouter();
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 min-h-[calc(100vh-8rem)]">
       <motion.div
@@ -92,9 +95,10 @@ export function HomeSection() {
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 group"
+                onClick={() => router.push("/cv")}
               >
                 <Rocket className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                View Projects
+                View CV
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button
