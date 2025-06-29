@@ -1,17 +1,15 @@
 "use client";
 
-import type { Metadata } from "next";
-import { useState, useEffect } from "react";
-import { Geist, Geist_Mono } from "next/font/google";
-import { motion, AnimatePresence } from "framer-motion";
-import { TooltipProvider } from "@/components/ui/tooltip";
+import { MouseCursor } from "@/components/material/mouse-cursor";
 import { FloatingParticles } from "@/components/pages/home/components/background/floating-particles";
-import { MobileHeader } from "@/components/pages/home/layout/navigation/mobile-header";
-import { MobileBottomNav } from "@/components/pages/home/layout/navigation/mobile-bottom-nav";
 import { DesktopSidebar } from "@/components/pages/home/layout/navigation/desktop-sidebar";
 import { DesktopStatusBar } from "@/components/pages/home/layout/navigation/desktop-status-bar";
-import { MouseCursor } from "@/components/material/mouse-cursor";
+import { MobileBottomNav } from "@/components/pages/home/layout/navigation/mobile-bottom-nav";
+import { MobileHeader } from "@/components/pages/home/layout/navigation/mobile-header";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import "@/styles/globals.css";
+import { AnimatePresence } from "framer-motion";
+import { Geist, Geist_Mono } from "next/font/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,8 +26,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [activeSection, setActiveSection] = useState("home");
-
   return (
     <html lang="en">
       <body

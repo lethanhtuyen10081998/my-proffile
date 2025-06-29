@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { projects } from "@/common/constants";
+import Image from "next/image";
 
 export function ProjectsSection() {
   return (
@@ -40,8 +41,10 @@ export function ProjectsSection() {
                 >
                   <Card className="bg-white/5 border-white/10 backdrop-blur-sm overflow-hidden hover:bg-white/10 transition-all duration-300">
                     <div className="relative">
-                      <img
-                        src={project.image || "/placeholder.svg"}
+                      <Image
+                        src={
+                          project.image || "/images/projects/placeholder.svg"
+                        }
                         alt={project.title}
                         className="w-full h-50 md:h-50 object-cover group-hover:scale-105 transition-transform duration-300"
                       />

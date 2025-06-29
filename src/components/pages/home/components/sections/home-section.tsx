@@ -1,29 +1,29 @@
 "use client";
 
-import { motion } from "framer-motion";
-import {
-  Sparkles,
-  Rocket,
-  ArrowRight,
-  Heart,
-  FolderOpen,
-  Calendar,
-  Star,
-  Code,
-  Zap,
-  ChevronRight,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { skills } from "@/common/constants";
 import { FloatingOrbs } from "@/components/pages/home/components/background/floating-orbs";
 import { GradientMesh } from "@/components/pages/home/components/background/gradient-mesh";
-import { skills } from "@/common/constants";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { motion } from "framer-motion";
+import {
+  ArrowRight,
+  Calendar,
+  ChevronRight,
+  Code,
+  FolderOpen,
+  Heart,
+  Rocket,
+  Sparkles,
+  Star,
+  Zap,
+} from "lucide-react";
+import Image from "next/image";
 
 export function HomeSection() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 min-h-[calc(100vh-8rem)]">
-      {/* Hero Card */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -103,7 +103,7 @@ export function HomeSection() {
                 className="border-white/30 text-white hover:bg-white hover:text-black bg-transparent"
               >
                 <Heart className="w-5 h-5 mr-2" />
-                Let's Talk
+                Let&apos;s Talk
               </Button>
             </motion.div>
           </CardContent>
@@ -201,10 +201,12 @@ export function HomeSection() {
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
                   <div className="md:col-span-6">
                     <div className="space-y-4 ">
-                      <img
+                      <Image
                         src="/images/projects/travel.png"
                         alt="Latest project"
                         className="w-full h-40 md:h-40 object-cover rounded-lg"
+                        width={100}
+                        height={100}
                       />
                       <div>
                         <h4 className="font-semibold text-white">
@@ -246,7 +248,7 @@ export function HomeSection() {
                   </div>
                   <div className="md:col-span-6">
                     <div className="space-y-4 ">
-                      <img
+                      <Image
                         src="/images/projects/taggrading.png"
                         alt="Latest project"
                         className="w-full h-40 md:h-40 object-cover rounded-lg"

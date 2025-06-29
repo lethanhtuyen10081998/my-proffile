@@ -1,14 +1,14 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { skills } from "@/common/constants";
 import {
   Card,
   CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
-  CardDescription,
 } from "@/components/ui/card";
-import { skills } from "@/common/constants";
+import { motion } from "framer-motion";
 
 export default function AboutSection() {
   return (
@@ -29,16 +29,16 @@ export default function AboutSection() {
           </CardHeader>
           <CardContent className="space-y-4 md:space-y-6">
             <p className="text-white/80 leading-relaxed text-sm md:text-base">
-              I'm a passionate full-stack developer with expertise in modern web
-              technologies. I specialize in creating exceptional digital
-              experiences that combine beautiful design with powerful
+              I&apos;m a passionate full-stack developer with expertise in
+              modern web technologies. I specialize in creating exceptional
+              digital experiences that combine beautiful design with powerful
               functionality and cutting-edge performance.
             </p>
             <p className="text-white/80 leading-relaxed text-sm md:text-base">
-              With over 3 years of experience, I've worked with startups and
-              established companies to build scalable applications that serve
-              thousands of users. I believe in writing clean, maintainable code
-              and staying up-to-date with the latest industry trends.
+              With over 3 years of experience, I&apos;ve worked with startups
+              and established companies to build scalable applications that
+              serve thousands of users. I believe in writing clean, maintainable
+              code and staying up-to-date with the latest industry trends.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mt-6 md:mt-8">
@@ -97,28 +97,33 @@ export default function AboutSection() {
             <CardTitle className="text-white">Skills</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4 md:space-y-6">
-            {skills.map((skill: any, index: any) => (
-              <motion.div
-                key={skill.name}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.3 + index * 0.1 }}
-                className="space-y-2"
-              >
-                <div className="flex justify-between text-sm">
-                  <span className="text-white">{skill.name}</span>
-                  <span className="text-white/60">{skill.level}%</span>
-                </div>
-                <div className="w-full bg-white/10 rounded-full h-2">
-                  <motion.div
-                    className={`h-2 rounded-full bg-gradient-to-r ${skill.color}`}
-                    initial={{ width: 0 }}
-                    animate={{ width: `${skill.level}%` }}
-                    transition={{ delay: 0.5 + index * 0.1, duration: 0.8 }}
-                  />
-                </div>
-              </motion.div>
-            ))}
+            {skills.map(
+              (
+                skill: { name: string; level: number; color: string },
+                index: number
+              ) => (
+                <motion.div
+                  key={skill.name}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.3 + index * 0.1 }}
+                  className="space-y-2"
+                >
+                  <div className="flex justify-between text-sm">
+                    <span className="text-white">{skill.name}</span>
+                    <span className="text-white/60">{skill.level}%</span>
+                  </div>
+                  <div className="w-full bg-white/10 rounded-full h-2">
+                    <motion.div
+                      className={`h-2 rounded-full bg-gradient-to-r ${skill.color}`}
+                      initial={{ width: 0 }}
+                      animate={{ width: `${skill.level}%` }}
+                      transition={{ delay: 0.5 + index * 0.1, duration: 0.8 }}
+                    />
+                  </div>
+                </motion.div>
+              )
+            )}
           </CardContent>
         </Card>
       </motion.div>

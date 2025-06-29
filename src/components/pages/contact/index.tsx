@@ -1,17 +1,17 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Send, Mail, Github, Linkedin, Facebook } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
-  CardDescription,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { motion } from "framer-motion";
+import { Facebook, Github, Mail, Send } from "lucide-react";
 
 export function ContactSection() {
   return (
@@ -25,10 +25,11 @@ export function ContactSection() {
         <Card className="h-full bg-white/5 border-white/10 backdrop-blur-sm">
           <CardHeader>
             <CardTitle className="text-2xl md:text-3xl text-white">
-              Let's Work Together
+              Let&apos;s Work Together
             </CardTitle>
             <CardDescription className="text-white/70">
-              Ready to bring your vision to life? Let's discuss your project.
+              Ready to bring your vision to life? Let&apos;s discuss your
+              project.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4 md:space-y-6">

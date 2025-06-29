@@ -38,6 +38,18 @@ export const projects = [
     image: "/images/projects/travel.png",
     status: "Live",
     year: "2024",
+    teams: [
+      {
+        members: ["Le Thanh Tuyen", "Le Son Thien"],
+        size: 1,
+        role: "Backend Developer",
+      },
+      {
+        members: ["Le Thanh Tuyen", "Le Son Thien"],
+        size: 1,
+        role: "Frontend Developer",
+      },
+    ],
   },
   {
     id: 2,
@@ -47,7 +59,39 @@ export const projects = [
     tech: ["React", "Storybook", "TypeScript"],
     image: "/images/projects/taggrading.png",
     status: "Active",
-    year: "2024",
+    year: "2023",
+    teams: [
+      {
+        members: ["PM DevBlock Company"],
+        size: 1,
+        role: "Project Manager",
+      },
+      {
+        members: ["BE NodeJS Developer DevBlock Company"],
+        size: 2,
+        role: "BE NodeJS Developer from Vietnam",
+      },
+      {
+        members: ["BE Python Developer DevBlock Company"],
+        size: 1,
+        role: "BE Python from US",
+      },
+      {
+        members: ["FE Developer DevBlock Company", "Le Thanh Tuyen"],
+        size: 2,
+        role: "FE Developer from Vietnam",
+      },
+      {
+        members: ["Quality Control DevBlock Company"],
+        size: 1,
+        role: "Quality Control",
+      },
+      {
+        members: ["Business Analyst DevBlock Company"],
+        size: 1,
+        role: "Business Analyst",
+      },
+    ],
   },
   {
     id: 3,
@@ -65,6 +109,38 @@ export const projects = [
     image: "/images/projects/origin.png",
     status: "Active",
     year: "2023",
+    teams: [
+      {
+        members: ["PM DevBlock Company"],
+        size: 1,
+        role: "Project Manager",
+      },
+      {
+        members: ["BE NodeJS Developer DevBlock Company"],
+        size: 2,
+        role: "BE NodeJS Developer from Vietnam",
+      },
+      {
+        members: ["BE Python Developer DevBlock Company"],
+        size: 1,
+        role: "BE Python from US",
+      },
+      {
+        members: ["FE Developer DevBlock Company", "Le Thanh Tuyen"],
+        size: 2,
+        role: "FE Developer from Vietnam",
+      },
+      {
+        members: ["Quality Control DevBlock Company"],
+        size: 1,
+        role: "Quality Control",
+      },
+      {
+        members: ["Business Analyst DevBlock Company"],
+        size: 1,
+        role: "Business Analyst",
+      },
+    ],
   },
   {
     id: 4,
@@ -75,6 +151,38 @@ export const projects = [
     image: "/images/projects/carina.png",
     status: "Active",
     year: "2021",
+    teams: [
+      {
+        members: ["PM DevBlock Company"],
+        size: 1,
+        role: "Project Manager",
+      },
+      {
+        members: ["BE NodeJS Developer DevBlock Company"],
+        size: 2,
+        role: "BE NodeJS Developer from Vietnam",
+      },
+      {
+        members: ["BE Python Developer DevBlock Company"],
+        size: 1,
+        role: "BE Python from US",
+      },
+      {
+        members: ["FE Developer DevBlock Company", "Le Thanh Tuyen"],
+        size: 2,
+        role: "FE Developer from Vietnam",
+      },
+      {
+        members: ["Quality Control DevBlock Company"],
+        size: 1,
+        role: "Quality Control",
+      },
+      {
+        members: ["Business Analyst DevBlock Company"],
+        size: 1,
+        role: "Business Analyst",
+      },
+    ],
   },
 ];
 
