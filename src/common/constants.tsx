@@ -207,10 +207,10 @@ export const experience = [
     achievements: [
       "Built AI-powered e-commerce platform increasing conversion by 35%",
       "Reduced server costs by 40% through AWS optimization",
-      "Led team of 5 developers on microservices migration",
       "Implemented CI/CD pipeline reducing deployment time by 60%",
+      "Developed a new feature for the product",
     ],
-    technologies: ["React", "Node.js", "AWS", "PostgreSQL", "Docker"],
+    technologies: ["React", "Node.js", "AWS", "PostgreSQL", "Docker", "...."],
   },
   {
     year: "2019",
@@ -222,11 +222,9 @@ export const experience = [
     description:
       "Lead development of scalable web applications serving 100K+ users. Architect cloud infrastructure and mentor junior developers.",
     achievements: [
-      "Built AI-powered e-commerce platform increasing conversion by 35%",
       "Reduced server costs by 40% through AWS optimization",
-      "Led team of 5 developers on microservices migration",
       "Implemented CI/CD pipeline reducing deployment time by 60%",
     ],
-    technologies: ["React", "Node.js", "AWS", "PostgreSQL", "Docker"],
+    technologies: ["React", "Node.js", "PostgreSQL", "Docker", "PHP", "...."],
   },
 ];

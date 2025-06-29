@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   MapPin,
   Building,
@@ -15,31 +16,31 @@ import {
   Globe,
   Calendar,
   ExternalLink,
-  Zap,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { skills, projects, experience } from "@/common/constants";
 
 const personalInfo = {
-  name: "Alex Chen",
+  name: "Tuyen Le Thanh",
   title: "Creative Full-Stack Developer",
   tagline: "Building the future, one line of code at a time",
-  email: "alex.chen@example.com",
-  phone: "+1 (555) 123-4567",
-  location: "San Francisco, CA",
-  website: "alexchen.dev",
-  github: "alexchen",
-  linkedin: "alexchen",
+  email: "lethanhtuyen10081998@gmail.com",
+  phone: "+84 0977 432 417",
+  location: "Ho Chi Minh City, Vietnam",
+  website: "https://tuyenlt.netlify.app/",
+  github: "https://github.com/lethanhtuyen10081998",
   summary:
     "Passionate full-stack developer with 5+ years crafting exceptional digital experiences. Specialized in React ecosystem, Node.js, and cloud architecture. Love turning complex problems into elegant solutions.",
+  avatar: "/images/projects/carina.png",
 };
 
 const education = {
   degree: "B.S. Computer Science",
-  school: "UC Berkeley",
-  period: "2015-2019",
-  gpa: "3.8",
-  achievements: ["Magna Cum Laude", "Dean's List", "CS Society President"],
+  school: "Ho Chi Minh City University of Technology and Education",
+  location: "Ho Chi Minh City, Vietnam",
+  period: "2016-2020",
+  gpa: "3.2",
+  achievements: ["Dean's List", "CS Society President"],
 };
 
 const certifications = [
@@ -48,12 +49,6 @@ const certifications = [
     issuer: "AWS",
     year: "2023",
     color: "from-orange-400 to-orange-600",
-  },
-  {
-    name: "Google Cloud Professional",
-    issuer: "GCP",
-    year: "2022",
-    color: "from-blue-400 to-blue-600",
   },
 ];
 
@@ -69,8 +64,25 @@ export function CVMainContent() {
 
         <div className="relative px-4 py-4">
           <div className="flex items-start justify-between">
-            {/* Left: Name & Title */}
-            <div className="flex-1">
+            {/* Left: Avatar + Name & Title */}
+            <div className="flex-1 flex gap-6">
+              {/* Avatar */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="flex-shrink-0"
+              >
+                <Image
+                  src={personalInfo.avatar}
+                  alt={personalInfo.name}
+                  width={150}
+                  height={150}
+                  className="rounded-full border-4 border-white shadow-md"
+                />
+              </motion.div>
+
+              {/* Name & Info */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -207,12 +219,10 @@ export function CVMainContent() {
                             <span>{exp.location}</span>
                           </div>
 
-                          {/* Job Description */}
                           <p className="text-sm text-slate-700 mb-3 leading-relaxed">
                             {exp.description}
                           </p>
 
-                          {/* Key Achievements */}
                           <div className="mb-3">
                             <h5 className="text-sm font-semibold text-slate-900 mb-2">
                               Key Achievements:
@@ -230,7 +240,6 @@ export function CVMainContent() {
                             </ul>
                           </div>
 
-                          {/* Technologies */}
                           <div>
                             <h5 className="text-sm font-semibold text-slate-900 mb-2">
                               Technologies:
@@ -273,7 +282,6 @@ export function CVMainContent() {
                 {projects.slice(0, 4).map((project, index) => (
                   <div key={project.id} className="group">
                     <div className="bg-white rounded-lg border border-slate-200 p-4 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                      {/* Project Icon & Status */}
                       <div className="flex items-center justify-between mb-3">
                         <div className="text-3xl">
                           {project.id === 1
@@ -304,7 +312,6 @@ export function CVMainContent() {
                         {project.description}
                       </p>
 
-                      {/* Tech Stack */}
                       <div className="flex flex-wrap gap-1 mb-3">
                         {project.tech.slice(0, 3).map((tech, i) => (
                           <Badge
@@ -366,7 +373,10 @@ export function CVMainContent() {
                         className={`h-2 rounded-full bg-gradient-to-r ${skill.color} shadow-sm`}
                         initial={{ width: 0 }}
                         animate={{ width: `${skill.level}%` }}
-                        transition={{ delay: 0.5 + index * 0.1, duration: 0.8 }}
+                        transition={{
+                          delay: 0.5 + index * 0.1,
+                          duration: 0.8,
+                        }}
                       />
                     </div>
                   </div>
@@ -426,49 +436,17 @@ export function CVMainContent() {
                 </div>
               </div>
 
-              <div className="space-y-2">
-                {certifications.map((cert, index) => (
+              <div className="space-y-4">
+                {certifications.map((cert, i) => (
                   <div
-                    key={index}
-                    className={`bg-gradient-to-r ${cert.color} rounded-lg p-3 text-white shadow-lg`}
+                    key={i}
+                    className={`bg-gradient-to-r ${cert.color} text-white p-4 rounded-lg shadow-lg`}
                   >
-                    <h4 className="font-bold text-sm">{cert.name}</h4>
-                    <p className="text-sm opacity-90">{cert.issuer}</p>
-                    <p className="text-xs opacity-75">{cert.year}</p>
+                    <h4 className="text-sm font-bold mb-1">{cert.name}</h4>
+                    <p className="text-xs">{cert.issuer}</p>
+                    <p className="text-xs mt-1">Issued: {cert.year}</p>
                   </div>
                 ))}
-              </div>
-            </section>
-
-            {/* Quick Stats */}
-            <section>
-              <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-lg p-4 text-white shadow-xl">
-                <div className="flex items-center gap-2 mb-3">
-                  <Zap className="w-4 h-4 text-yellow-400" />
-                  <h3 className="font-bold">Quick Stats</h3>
-                </div>
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="text-center">
-                    <div className="text-2xl font-black text-yellow-400">
-                      50+
-                    </div>
-                    <div className="text-xs opacity-75">Projects</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-black text-blue-400">5+</div>
-                    <div className="text-xs opacity-75">Years</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-black text-emerald-400">
-                      100%
-                    </div>
-                    <div className="text-xs opacity-75">Success</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-black text-purple-400">∞</div>
-                    <div className="text-xs opacity-75">Passion</div>
-                  </div>
-                </div>
               </div>
             </section>
           </div>

@@ -14,7 +14,7 @@ import Image from "next/image";
 
 export function ProjectsSection() {
   return (
-    <div className="grid grid-cols-1 gap-4 md:gap-6 min-h-[calc(100vh-8rem)]">
+    <div className="grid grid-cols-1 gap-4 md:gap-6">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
