@@ -1,4 +1,4 @@
-import HomePage from "@/components/pages/home";
+import { HomePage } from "@/components/pages/home";
 import { Metadata } from "next";
 
 export default function Portfolio() {
