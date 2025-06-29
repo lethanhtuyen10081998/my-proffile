@@ -10,10 +10,9 @@ import {
 } from "@/components/ui/card";
 import { skills } from "@/common/constants";
 
-export function AboutSection() {
+export default function AboutSection() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6 min-h-[calc(100vh-8rem)]">
-      {/* About Me */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

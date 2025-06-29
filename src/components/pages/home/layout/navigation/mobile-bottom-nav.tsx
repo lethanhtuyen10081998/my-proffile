@@ -2,16 +2,12 @@
 
 import { motion } from "framer-motion";
 import { navigationItems } from "@/common/constants";
+import { usePathname, useRouter } from "next/navigation";
 
-interface MobileBottomNavProps {
-  activeSection: string;
-  setActiveSection: (section: string) => void;
-}
+export function MobileBottomNav() {
+  const pathname = usePathname();
+  const router = useRouter();
 
-export function MobileBottomNav({
-  activeSection,
-  setActiveSection,
-}: MobileBottomNavProps) {
   return (
     <motion.nav
       initial={{ y: 100 }}
@@ -22,11 +18,11 @@ export function MobileBottomNav({
         <button
           key={item.id}
           className={`flex flex-col items-center gap-1 p-2 rounded-lg transition-all ${
-            activeSection === item.id
+            pathname === item.link
               ? "text-blue-400 bg-blue-400/10"
               : "text-white/60 hover:text-white"
           }`}
-          onClick={() => setActiveSection(item.id)}
+          onClick={() => router.push(item.link)}
         >
           <item.icon className="w-5 h-5" />
           <span className="text-xs">{item.label}</span>

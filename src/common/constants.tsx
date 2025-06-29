@@ -1,11 +1,16 @@
 import { Home, User, Briefcase, FolderOpen, MessageCircle } from "lucide-react";
 
 export const navigationItems = [
-  { id: "home", label: "Home", icon: Home },
-  { id: "about", label: "About", icon: User },
-  { id: "experience", label: "Experience", icon: Briefcase },
-  { id: "projects", label: "Projects", icon: FolderOpen },
-  { id: "contact", label: "Contact", icon: MessageCircle },
+  { id: "home", label: "Home", icon: Home, link: "/" },
+  { id: "about", label: "About", icon: User, link: "/about" },
+  {
+    id: "experience",
+    label: "Experience",
+    icon: Briefcase,
+    link: "/experience",
+  },
+  { id: "projects", label: "Projects", icon: FolderOpen, link: "/projects" },
+  { id: "contact", label: "Contact", icon: MessageCircle, link: "/contact" },
 ];
 
 export const skills = [

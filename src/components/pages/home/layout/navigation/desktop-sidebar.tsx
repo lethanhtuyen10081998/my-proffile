@@ -10,17 +10,12 @@ import {
   TooltipProvider,
 } from "@/components/ui/tooltip";
 import { navigationItems } from "@/common/constants";
+import { usePathname, useRouter } from "next/navigation";
 
-interface DesktopSidebarProps {
-  activeSection: string;
-  setActiveSection: (section: string) => void;
-}
-
-export function DesktopSidebar({
-  activeSection,
-  setActiveSection,
-}: DesktopSidebarProps) {
+export function DesktopSidebar() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   return (
     <TooltipProvider>
@@ -45,11 +40,11 @@ export function DesktopSidebar({
               <TooltipTrigger asChild>
                 <motion.button
                   className={`w-12 h-12 rounded-xl flex items-center justify-center transition-all ${
-                    activeSection === item.id
+                    pathname === item.link
                       ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg"
                       : "hover:bg-white/10 text-white/60 hover:text-white"
                   }`}
-                  onClick={() => setActiveSection(item.id)}
+                  onClick={() => router.push(`${item.link}`)}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   initial={{ opacity: 0, x: -20 }}
